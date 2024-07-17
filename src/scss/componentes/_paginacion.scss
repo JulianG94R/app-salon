@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.paginacion {
+    padding: v.$separacion 0;
+
+    @include m.telefono {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        margin: 0 0 1rem 0;
+        background-color: v.$verde;
+
+        &:hover{
+            cursor: pointer;
+            background-color: darken(v.$verde, 10%);
+        }
+    }
+}
+
+.ocultar {
+    visibility: hidden;
+}
